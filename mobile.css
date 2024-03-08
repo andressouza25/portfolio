@@ -1,0 +1,131 @@
+@media (max-width: 1024px) {
+  .navbar-container {
+    display: none;
+  }
+
+  .showcase-container > .showcase-text {
+    margin-bottom: 200px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .showcase-container > .showcase-text > h1 {
+    font-size: 3rem;
+    text-align: center;
+    line-height: 3.3rem;
+  }
+  .showcase-container > .showcase-text > p {
+    font-size: 0.875rem;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  /* About me */
+  .about-me-content {
+    flex-direction: column;
+  }
+  .about-me-content > img {
+    width: 200px;
+    height: 200px;
+    margin-right: 0;
+  }
+
+  .about-me-content p {
+    font-size: 0.875rem;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  /* Habilidades */
+  .skill-content {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+  .skill-content > .skill-item:nth-child(2) {
+    margin: 40px 0;
+  }
+
+  .skill-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .skill-item {
+    padding: 30px;
+  }
+
+  .skill-item p {
+    font-size: 0.875rem;
+  }
+
+  /* Projetos */
+
+  .projects-content {
+    margin-top: 40px;
+  }
+  .project-item {
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+
+  .project-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .project-text {
+    margin-left: 0;
+    max-width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .project-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .project-item p {
+    font-size: 0.875rem;
+    margin-top: 10px;
+  }
+
+  .projects-content .project-item:nth-child(2) {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .projects-content .project-item:nth-child(2) > img {
+    order: 1;
+    margin-left: 0;
+  }
+  .projects-content .project-item:nth-child(2) > .project-text {
+    order: 2;
+  }
+
+  /* Formulario */
+
+  .contact-form {
+    margin-top: 40px;
+  }
+
+  /* Footer */
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-items {
+    margin-bottom: 15px;
+  }
+  .social-items a:last-child {
+    margin-right: 0;
+  }
+
+  /* Utilities */
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-container {
+    padding: 30px;
+  }
+}
