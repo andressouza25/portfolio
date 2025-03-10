@@ -1,6 +1,32 @@
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+  padding: 10px;
+}
+
+/* Ajusta o menu para o mobile */
 @media (max-width: 1024px) {
-  .navbar-container {
-    display: none;
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-container ul {
+    display: none; /* Esconde os links até o usuário clicar */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .navbar-container ul a {
+    display: block;
+    padding: 10px;
   }
 
   .showcase-container > .showcase-text {
