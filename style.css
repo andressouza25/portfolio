@@ -149,25 +149,41 @@ html {
   margin-top: 118px;
 }
 
-/* .projects-content .project-item:nth-child(2) {
-  justify-content: flex-end;
-  text-align: right;
-} */
-
-/* .projects-content .project-item:nth-child(2) > img {
-  order: 2;
-  margin-left: 50px;
-}
-.projects-content .project-item:nth-child(2) > .project-text {
-  order: 1;
-} */
-
 .project-item {
   display: flex;
   align-items: center;
   margin-bottom: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.project-item:hover {
+  transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adiciona sombra para destacar */
+}
+
+.projects-content-small .project-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px; /* Mantém bordas arredondadas */
+}
+
+.projects-content-small .project-item:hover {
+  transform: scale(1.05);
+}
+
+.projects-content-small .project-item img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.projects-content-small .project-text-small {
+  width: 100%;
+  padding: 10px 0; /* Garante que o botão fique dentro do efeito */
+}
 .project-item > img {
   width: 300px;
   height: 300px;
@@ -180,6 +196,91 @@ html {
   max-width: 600px;
 }
 
+.project-text p {
+  margin-bottom: 15px; /* Adiciona espaçamento entre o texto e o botão */
+  margin-top: 15px;
+}
+
+.project-text-small p {
+  margin-bottom: 15px; /* Para os projetos menores também */
+}
+
+.btn-project,
+.btn-project-small {
+  background: #202020; /* Preto/Cinza escuro */
+  color: white;
+  border: 1px solid white; /* Adiciona um contorno para destaque */
+  font-weight: 500;
+  margin-top: 15px;
+  padding: 10px 15px; /* Reduz o padding para acomodar textos longos */
+  max-width: 90%; /* Garante que o botão não ultrapasse a área disponível */
+  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adiciona "..." se o texto for muito grande */
+  font-size: 0.9rem;
+}
+
+.btn-project:hover,
+.btn-project-small:hover {
+  background: #333333; /* Um tom mais claro ao passar o mouse */
+  transform: scale(1.05); /* Pequeno efeito de zoom para interação */
+}
+
+.project-buttons {
+  display: flex;
+  gap: 10px; /* Espaço entre os botões */
+  flex-wrap: wrap; /* Permite quebrar para linha de baixo caso necessário */
+  justify-content: center; /* Alinha ao centro */
+  margin-top: 10px; /* Espaço entre o texto acima e os botões */
+  margin-bottom: 25px; /* 🚀 Adiciona espaçamento entre os botões e as tecnologias */
+}
+
+.project-buttons .btn-project {
+  flex: 1;
+  text-align: center;
+  min-width: 140px; /* Define um tamanho mínimo para evitar que fiquem muito pequenos */
+}
+
+.projects-content .project-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.projects-content .project-item img {
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+/* Estilizar os projetos menores */
+.projects-content-small {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Distribui os itens dinamicamente */
+  gap: 20px; /* Espaçamento entre os projetos */
+  justify-content: center;
+}
+
+.projects-content-small .project-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 300px; /* Limita o tamanho dos projetos para não ficarem muito grandes */
+  margin: auto; /* Mantém alinhado */
+}
+
+.projects-content-small .project-item img {
+  width: 80%;
+  max-width: 200px;
+  border-radius: 10px;
+}
 .project-text > p {
   color: #fff;
   opacity: 75%;
@@ -219,18 +320,6 @@ html {
   justify-content: space-between;
   text-align: right;
 }
-/* .projects-content-small .project-item:nth-child(2) {
-  justify-content: flex-end;
-  text-align: center;
-}
-
-.projects-content-small .project-item:nth-child(2) {
-  order: 0;
-  margin-left: 50px;
-}
-.projects-content-small .project-item:nth-child(2) {
-  order: 1;
-} */
 
 .contact-form {
   display: flex;
@@ -288,6 +377,11 @@ html {
   margin: auto;
 }
 
+.projects-content-small-title {
+  margin-top: 200px; /* Espaço entre os projetos principais e "Projetos Menores" */
+  margin-bottom: 150px; /* Espaço entre o título e os itens dos projetos menores */
+}
+
 .form-input {
   border: none;
   border-radius: 10px;
@@ -317,4 +411,8 @@ html {
 
 .form-input::placeholder {
   color: rgba(255, 255, 255, 0.5);
+}
+
+.menu-toggle {
+  display: none;
 }

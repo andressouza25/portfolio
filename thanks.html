@@ -3,7 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfólio</title>
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Portfólio de André Santos - Desenvolvedor Full Stack especializado em JavaScript, React e Node.js."
+    />
+    <meta name="author" content="André Santos" />
+    <meta
+      name="keywords"
+      content="Desenvolvedor, Full Stack, JavaScript, React, Node.js, Portfólio"
+    />
+
+    <!-- Open Graph (Facebook & LinkedIn) -->
+    <meta property="og:title" content="Portfólio de André Santos" />
+    <meta
+      property="og:description"
+      content="Desenvolvedor Full Stack apaixonado por tecnologia e inovação."
+    />
+    <meta
+      property="og:image"
+      content="https://andressouza25.github.io/portfolio/images/perfil.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://andressouza25.github.io/portfolio/"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Portfólio de André Santos" />
+    <meta
+      name="twitter:description"
+      content="Sou um desenvolvedor Full Stack apaixonado por tecnologia e inovação."
+    />
+    <meta
+      name="twitter:image"
+      content="https://andressouza25.github.io/portfolio/images/perfil.jpg"
+    />
+
+    <title>André Santos - Portfólio</title>
     <link
       rel="shortcut icon"
       href="./images/faviconPortfolio.png"
@@ -23,9 +62,14 @@
     ></script>
   </head>
   <body>
+    <script src="script.js"></script>
+
     <!-- Navbar -->
     <nav class="navbar-container">
-      <ul>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul id="menu">
         <a href="#sobre"> <li>Sobre</li> </a>
         <a href="#skills"> <li>Habilidades</li> </a>
         <a href="#projects"> <li>Projetos</li> </a>
@@ -35,8 +79,8 @@
 
     <div class="showcase-container">
       <div class="showcase-text">
-        <h1>Obrigado pelo seu contato!</h1>
-        <p>Retornarei em breve :)</p>
+        <h1>Oi, eu sou André!</h1>
+        <p>A professional Full-Stack Developer</p>
       </div>
     </div>
 
@@ -94,7 +138,7 @@
           <div class="skill-item">
             <img src="./images/css-3.svg" alt="CSS" />
             <span>CSS</span>
-            <p>Linguagem responsável por definir o estido dos sites.</p>
+            <p>Linguagem responsável por definir o estilo dos sites.</p>
           </div>
           <div class="skill-item">
             <img src="./images/logo-javascript.svg" alt="JavaScript" />
@@ -116,16 +160,16 @@
           <div class="skill-item">
             <img src="./images/typescript-2.svg" alt="TypeScript" />
             <span>TypeScript</span>
-            <p>Linguagem de código aberto criada em cima do JavaSript.</p>
+            <p>Linguagem de código aberto criada em cima do JavaScript.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Projetos -->
+    <!-- Projetos Principais-->
     <div class="section-container" id="projects">
       <div class="section-content">
-        <h2 class="section-title">Projetos</h2>
+        <h2 class="section-title">Projetos Principais</h2>
 
         <div class="projects-content">
           <div class="project-item">
@@ -137,6 +181,14 @@
                 conhecimento em HTML e CSS. O projeto refere-se a um website de
                 previsão de tempo.
               </p>
+              <a
+                href="https://github.com/andressouza25/weatherApp"
+                target="_blank"
+                class="btn-project"
+              >
+                <strong>Ver no GitHub</strong></a
+              >
+              <p>HTML | CSS | JavaScript</p>
             </div>
           </div>
 
@@ -144,20 +196,30 @@
             <img src="./images/FSWBarber full image.png" alt="FSW Barber" />
             <div class="project-text">
               <h3>Agende um horário em uma barbearia</h3>
+
               <p>
                 Este projeto é um aplicativo para agendamento de horários de
-                serviços em barbearias. Para saber mais, acesse o github
-                abaixo:<br />
-                <strong
-                  >https://github.com/andressouza25/fullstackweek-barbe</strong
-                >r
-                <br />
-                Ou se preferir, acesse o site:
-                <a href="https://fsw-barber-midrops.vercel.app/">
-                  <strong>FSW Barber</strong></a
-                >
+                serviços em barbearias. Para saber mais, acesse o github abaixo:
+              </p>
+              <a
+                href="https://github.com/andressouza25/fullstackweek-barber"
+                target="_blank"
+                class="btn-project"
+              >
+                <strong>Ver no GitHub</strong></a
+              >
 
-                <br /><br />
+              <a
+                href="https://fsw-barber-midrops.vercel.app/"
+                target="_blank"
+                class="btn-project"
+              >
+                <strong>Acessar o Website</strong></a
+              >
+
+
+
+              <p>
                 HTML | Tailwind CSS | TypeScript | Next | React | Prisma |
                 Vercel Postgres
               </p>
@@ -173,15 +235,54 @@
                 Nele você pode adicionar, marcar como executada e excluir
                 tarefas. Este projeto possui um servidor Front-end e um servidor
                 Back-end.
-                <br />
-                <br />
-                SASS | JavaScript | React | Node.js | Railwind
               </p>
+              <a
+                href="https://github.com/andressouza25/task-manager-frontend"
+                target="_blank"
+                class="btn-project"
+              >
+
+                <strong>GitHub Front-end</strong></a
+              >
+
+              <a
+                href="https://github.com/andressouza25/task-manager-backend"
+                target="_blank"
+                class="btn-project"
+              >
+
+                <strong>GitHub Back-end</strong></a
+              >
+              <p>SASS | JavaScript | React | Node.js | Tailwind</p>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <img src="./images/ecommerce.png" alt="E-commerce" />
+            <div class="project-text">
+              <h3>E-commerce</h3>
+              <p>
+                Plataforma de compras online desenvolvida com React e Node.js.
+              </p>
+              <a
+                href="https://github.com/andressouza25/frontend-ecommerce"
+                target="_blank"
+                class="btn-project"
+                >GitHub Front-end</a
+              >
+              <a
+                href="https://github.com/andressouza25/backend-ecommerce"
+                target="_blank"
+                class="btn-project"
+                >GitHub Back-end</a
+              >
+              <p> TypeScript | React | Node.js | Firebase</p>
+
             </div>
           </div>
         </div>
 
-        <h2 class="section-title">Projetos Menores</h2>
+        <h2 class="section-title projects-content-small-title">Projetos Menores</h2>
 
         <div class="projects-content-small">
           <div class="project-item">
@@ -189,25 +290,55 @@
             <div class="project-text-small">
               <h3>Calculadora</h3>
               <p>JavaScript | CSS</p>
+              <a
+                href="https://github.com/andressouza25/calculadora"
+                target="_blank"
+                class="btn-project-small"
+                >Ver no GitHub</a
+              >
             </div>
+          </div>
+
+          <div class="project-item">
+            <img src="./images/jogoDaVelha.png" alt="Jogo da Velha" />
             <div class="project-text-small">
               <h3>Jogo da Velha</h3>
               <p>JavaScript | CSS</p>
+              <a
+                href="https://github.com/andressouza25/jogoDaVelha"
+                target="_blank"
+                class="btn-project-small"
+                >Ver no GitHub</a
+              >
             </div>
-            <img src="./images/jogoDaVelha.png" alt="Jogo da Velha" />
           </div>
-
           <div class="project-item">
             <img src="./images/relogio.png" alt="Relogio" />
             <div class="project-text-small">
               <h3>Relógio</h3>
               <p>JavaScript | CSS</p>
+              <a
+                href="https://github.com/andressouza25/clock"
+                target="_blank"
+                class="btn-project-small"
+                >Ver no GitHub</a
+              >
             </div>
+          </div>
+          <div class="project-item">
+            <img src="./images/formulario.png" alt="Formulario" />
             <div class="project-text-small">
               <h3>Formulário</h3>
               <p>JavaScript | CSS</p>
+              <a
+                href="https://github.com/andressouza25/formulario"
+                target="_blank"
+                class="btn-project-small"
+                >Ver no GitHub</a
+              >
             </div>
-            <img src="./images/formulario.png" alt="Formulario" />
+          </div>
+        
           </div>
         </div>
       </div>
