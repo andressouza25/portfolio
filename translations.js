@@ -77,7 +77,7 @@ const translations = {
     // About Me
     "about-title": "About Me",
     "about-text":
-      "Hello! My name is <strong>André</strong>, I hold a degree in Computer Networks from Estácio de Sá University and in Systems Analysis and Development from Unicesumar University. I have a solid background in Information Technology, with a focus on networks and systems development.<br /><br />My career began in 2017 with an internship at Yama Telecom, where I had my first professional experience in the IT sector. In 2018, I accepted a new challenge as a Network Technician at Canal Telecom, a company specialized in voice solutions over IP networks. For almost four years, I worked in levels 1 and 2 support, as well as leading the team in periods of absence of my supervisor, receiving positive feedback on my leadership skills and performance.<br /><br />In 2022, I embarked on an exchange program in Ireland, where I lived for two years and improved my English, making it a differential in my professional background. Now, I am expanding my knowledge in web development as a student of the <strong>Full Stack Club</strong> program, preparing myself to work on innovative and dynamic projects in the technology market.",
+      "Hello! My name is <strong>André</strong>, I hold a degree in Computer Networks from Estácio de Sá University and in Systems Analysis and Development from Unicesumar University. I have a solid background in Information Technology, with a focus on networks and systems development.<br /><br />My career began in 2017 with an internship at Yama Telecom, where I had my first professional experience in the IT sector. In 2018, I accepted a new challenge as a Network Technician at Canal Telecom, a company specialized in voice solutions over IP networks. For almost four years, I worked in levels 1 and 2 support, as well as leading the team in periods of absence of my supervisor, receiving positive feedback on my leadership skills and performance.<br /><br />In 2022, I embarked on an exchange program in Ireland, where I lived for two years and improved my English, making it a differential in my professional background. Now, I am expanding my knowledge in web development as a student of the <strong>Full Stack Club</strong> program, preparing myself to work on innovative and dynamic projects in the technology market.<br/><br/>Combining my practical experience, technical skills, and academic background, I am excited to contribute to projects involving networks, software development, and technology in general. I am always looking for new challenges and opportunities to grow and add value.",
 
     // Skills
     "skills-title": "Skills",
@@ -95,12 +95,16 @@ const translations = {
 
     // Main Projects
     "project-weather": "Weather Forecast",
-    "project-weather-desc": "...",
+    "project-weather-desc":
+      "This project marks the beginning of my journey with web development, combining HTML, CSS, and JavaScript to create a dynamic weather forecast application. The goal was to integrate fundamental concepts of structure, styling, and interactivity, providing an intuitive experience for users when querying weather conditions.",
     "project-barber": "Book a Barbershop Appointment",
-    "project-barber-desc": "...",
+    "project-barber-desc":
+      "Application developed to optimize the scheduling process of services in barbershops. With a responsive interface, it allows users to choose the barbershop, select the desired service, and schedule an appointment in a practical and efficient way. Although it is a project focused on mobile devices, its web implementation ensures multiplatform accessibility.",
     "project-task": "Task Manager",
-    "project-task-desc": "...",
-    "project-ecommerce-desc": "...",
+    "project-task-desc":
+      "Task manager developed in React, designed to assist in organizing daily routines. The application allows you to add, mark as completed, and delete tasks, providing an interactive and fluid experience. The project's architecture explores React best practices to create a dynamic and efficient interface.",
+    "project-ecommerce-desc":
+      "Online shopping platform built with React and Node.js, offering a complete e-commerce experience. The application integrates the Stripe payment system for secure transactions and also incorporates automated tests in React, ensuring the reliability and stability of the system. This project represents a significant advancement in the implementation of robust features in modern web applications",
 
     // Buttons
     "button-github": "View on GitHub",
