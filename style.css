@@ -163,17 +163,23 @@ html {
   margin-top: 108px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .skill-content > .skill-item {
   display: flex;
   flex-direction: column;
   background-color: #202020;
-  padding: 50px;
+  padding: 20px;
   border-radius: 20px;
   text-align: center;
   justify-content: center;
   align-items: center;
+  width: 350px; /* Ajuste para garantir que todos os itens tenham a mesma largura */
+  height: 300px; /* Ajuste de altura fixa */
+  min-width: 200px; /* Garante que o item não fique menor que 200px */
+  max-width: 500px; /* Limita a largura para evitar que fique muito grande */
+  margin-bottom: 10px; /* Espaçamento entre os itens */
 }
 .skill-content > .skill-item > span {
   margin-top: 15px;
@@ -183,14 +189,15 @@ html {
 }
 
 .skill-content > .skill-item > img {
-  width: 100px;
-  height: 100px;
+  width: 80px; /* Ajusta todas as imagens para terem o mesmo tamanho */
+  height: 80px; /* Garante que as imagens não fiquem desproporcionais */
   border-radius: 10px;
 }
 
 .skill-content > .skill-item > p {
   color: #fff;
   opacity: 75%;
+  margin-top: 10px; /* Ajuste no espaço entre o texto e a imagem */
 }
 
 .skill-content > .skill-item:nth-child(2) {
