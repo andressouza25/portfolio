@@ -56,13 +56,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/7ffaac3e08.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+
   <body>
-    <script src="script.js"></script>
 
     <!-- Navbar -->
     <nav class="navbar-container">
@@ -70,27 +65,34 @@
         <i class="fas fa-bars"></i>
       </div>
       <ul id="menu">
-        <a href="#sobre"> <li>Sobre</li> </a>
-        <a href="#skills"> <li>Habilidades</li> </a>
-        <a href="#projects"> <li>Projetos</li> </a>
-        <a href="#contact"> <li>Contato</li> </a>
+        <li><a href="#sobre" data-i18n="menu-about">Sobre</a></li>
+        <li><a href="#skills" data-i18n="menu-skills">Habilidades</a></li>
+        <li><a href="#projects" data-i18n="menu-projects">Projetos</a></li>
+        <li><a href="#contact" data-i18n="menu-contact">Contato</a></li>
       </ul>
+      
+      <!-- Botão de Idioma -->
+      <div class="language-switcher">
+        <button id="language-toggle" class="lang-btn" aria-label="Trocar idioma">
+          🇧🇷 PT | 🇺🇸 EN
+        </button>
+      </div>
     </nav>
 
     <div class="showcase-container">
       <div class="showcase-text">
-        <h1>Oi, eu sou André!</h1>
-        <p>A professional Full-Stack Developer</p>
+        <h1 data-i18n="showcase-title">Oi, eu sou André!</h1>
+        <p data-i18n="showcase-subtitle">Desenvolvedor Full Stack</p>
       </div>
     </div>
 
     <!-- SOBRE MIM -->
     <div class="section-container" id="sobre">
       <div class="section-content">
-        <h2 class="section-title">sobre mim</h2>
+        <h2 class="section-title" data-i18n="about-title">Sobre Mim</h2>
         <div class="about-me-content">
           <img src="./images/perfil.jpg" alt="Andre Santos" />
-          <p>
+          <p data-i18n="about-text">
             Olá! Meu nome é <strong>André</strong>, sou formado em Redes de
             Computadores pela Universidade Estácio de Sá e em Análise e
             Desenvolvimento de Sistemas pela Universidade Unicesumar. Tenho
@@ -127,40 +129,40 @@
     <!-- Skills -->
     <div class="section-container" id="skills">
       <div class="section-content">
-        <h2 class="section-title">Habilidades</h2>
+        <h2 class="section-title" data-i18n="skills-title">Habilidades</h2>
 
         <div class="skill-content">
           <div class="skill-item">
             <img src="./images/html-1.svg" alt="HTML" />
             <span>HTML</span>
-            <p>Linguagem responsável por definir o esqueleto de sites.</p>
+            <p data-i18n="skills-html">Linguagem responsável por definir o esqueleto de sites.</p>
           </div>
           <div class="skill-item">
             <img src="./images/css-3.svg" alt="CSS" />
             <span>CSS</span>
-            <p>Linguagem responsável por definir o estilo dos sites.</p>
+            <p data-i18n="skills-css">Linguagem responsável por definir o estilo dos sites.</p>
           </div>
           <div class="skill-item">
             <img src="./images/logo-javascript.svg" alt="JavaScript" />
             <span>JavaScript</span>
-            <p>Linguagem responsável por adicionar lógica aos sites.</p>
+            <p data-i18n="skills-js">Linguagem responsável por adicionar lógica aos sites.</p>
           </div>
         </div>
         <div class="skill-content">
           <div class="skill-item">
             <img src="./images/nodejs-icon.svg" alt="Node.js" />
             <span>Node.JS</span>
-            <p>Ambiente de execução do código JavaScript do lado servidor.</p>
+            <p data-i18n="skills-node">Ambiente de execução do código JavaScript do lado servidor.</p>
           </div>
           <div class="skill-item">
             <img src="./images/react-1.svg" alt="React" />
             <span>React</span>
-            <p>Biblioteca JS usada para construir interfaces para usuário.</p>
+            <p data-i18n="skills-react">Biblioteca JavaScript usada para construir interfaces para usuário.</p>
           </div>
           <div class="skill-item">
             <img src="./images/typescript-2.svg" alt="TypeScript" />
             <span>TypeScript</span>
-            <p>Linguagem de código aberto criada em cima do JavaScript.</p>
+            <p data-i18n="skills-typescript">Linguagem de código aberto criada em cima do JavaScript.</p>
           </div>
         </div>
       </div>
@@ -169,14 +171,14 @@
     <!-- Projetos Principais-->
     <div class="section-container" id="projects">
       <div class="section-content">
-        <h2 class="section-title">Projetos Principais</h2>
+        <h2 class="section-title" data-i18n="projects-title">Projetos Principais</h2>
 
         <div class="projects-content">
           <div class="project-item">
             <img src="./images/climahoje.svg" alt="clima hoje" />
             <div class="project-text">
-              <h3>Previsão de tempo</h3>
-              <p>
+              <h3 data-i18n="project-weather">Previsão de tempo</h3>
+              <p data-i18n="project-weather-desc">
                 Este projeto marca o início da minha jornada com desenvolvimento web, combinando HTML, CSS e JavaScript para criar uma aplicação dinâmica de previsão do tempo. O objetivo foi integrar conceitos fundamentais de estruturação, estilização e interatividade, proporcionando uma experiência intuitiva para o usuário ao consultar condições climáticas.
               </p>
               <a
@@ -184,7 +186,7 @@
                 target="_blank"
                 class="btn-project"
               >
-                <strong>Ver no GitHub</strong></a
+                <strong data-i18n="button-github">Ver no GitHub</strong></a
               >
               <p>HTML | CSS | JavaScript</p>
             </div>
@@ -193,9 +195,9 @@
           <div class="project-item">
             <img src="./images/FSWBarber full image.png" alt="FSW Barber" />
             <div class="project-text">
-              <h3>Agende um horário em uma barbearia</h3>
+              <h3 data-i18n="project-barber">Agende um horário em uma barbearia</h3>
 
-              <p>
+              <p data-i18n="project-barber-desc"> 
                 Aplicação desenvolvida para otimizar o processo de agendamento de serviços em barbearias. Com uma interface responsiva, permite que os usuários escolham a barbearia, selecionem o serviço desejado e agendem um horário de forma prática e eficiente. Embora seja um projeto focado em dispositivos móveis, sua implementação web garante acessibilidade multiplataforma.
               </p>
               <a
@@ -203,7 +205,7 @@
                 target="_blank"
                 class="btn-project"
               >
-                <strong>Ver no GitHub</strong></a
+                <strong data-i18n="button-github">Ver no GitHub</strong></a
               >
 
               <a
@@ -211,7 +213,7 @@
                 target="_blank"
                 class="btn-project"
               >
-                <strong>Acessar o Website</strong></a
+                <strong data-i18n="button-website">Visitar site</strong></a
               >
 
 
@@ -226,8 +228,8 @@
           <div class="project-item">
             <img src="./images/task-manager-menu.png" alt="Task Manager" />
             <div class="project-text">
-              <h3>Task Manager</h3>
-              <p>
+              <h3 data-i18n="project-task">Task Manager</h3>
+              <p data-i18n="project-task-desc">
                 Gerenciador de tarefas desenvolvido em React, projetado para auxiliar na organização da rotina diária. A aplicação permite adicionar, marcar como concluídas e excluir tarefas, proporcionando uma experiência interativa e fluida. A arquitetura do projeto explora boas práticas do React para criar uma interface dinâmica e eficiente.
               </p>
               <a
@@ -236,7 +238,7 @@
                 class="btn-project"
               >
 
-                <strong>GitHub Front-end</strong></a
+                <strong data-i18n="button-frontend">GitHub Front-end</strong></a
               >
 
               <a
@@ -245,7 +247,7 @@
                 class="btn-project"
               >
 
-                <strong>GitHub Back-end</strong></a
+                <strong data-i18n="button-backend">GitHub Back-end</strong></a
               >
               <p>SASS | JavaScript | React | Node.js | Tailwind</p>
             </div>
@@ -255,20 +257,24 @@
             <img src="./images/ecommerce.png" alt="E-commerce" />
             <div class="project-text">
               <h3>E-commerce</h3>
-              <p>
+              <p data-i18n="project-ecommerce-desc">
                 Plataforma de compras online construída com React e Node.js, oferecendo uma experiência completa de e-commerce. A aplicação integra o sistema de pagamentos Stripe para transações seguras e, além disso, incorpora testes automatizados em React, garantindo a confiabilidade e estabilidade do sistema. Este projeto representa um avanço significativo na implementação de funcionalidades robustas em aplicações web modernas.
               </p>
               <a
                 href="https://github.com/andressouza25/frontend-ecommerce"
                 target="_blank"
                 class="btn-project"
-                >GitHub Front-end</a
+                >
+                <strong data-i18n="button-frontend">GitHub Front-end</strong> 
+                </a
               >
               <a
                 href="https://github.com/andressouza25/backend-ecommerce"
                 target="_blank"
                 class="btn-project"
-                >GitHub Back-end</a
+                >
+                <strong data-i18n="button-backend">GitHub Back-end</strong> 
+                </a
               >
               <p> TypeScript | React | Node.js | Firebase | Redux |  Testes </p>
 
@@ -278,19 +284,21 @@
 
     <!-- Projetos Menores-->
 
-        <h2 class="section-title projects-content-small-title">Projetos Menores</h2>
+        <h2 class="section-title projects-content-small-title" data-i18n="small-projects-title">Projetos Menores</h2>
 
         <div class="projects-content-small">
           <div class="project-item">
             <img src="./images/calculadora.png" alt="Calculadora" />
             <div class="project-text-small">
-              <h3>Calculadora</h3>
+              <h3 data-i18n="project-calculator">Calculadora</h3>
               <p>JavaScript | CSS</p>
               <a
                 href="https://github.com/andressouza25/calculadora"
                 target="_blank"
                 class="btn-project-small"
-                >Ver no GitHub</a
+                >
+                <strong data-i18n="button-github">Ver no GitHub</strong> 
+                </a
               >
             </div>
           </div>
@@ -298,39 +306,45 @@
           <div class="project-item">
             <img src="./images/jogoDaVelha.png" alt="Jogo da Velha" />
             <div class="project-text-small">
-              <h3>Jogo da Velha</h3>
+              <h3 data-i18n="project-tic-tac-toe">Jogo da Velha</h3>
               <p>JavaScript | CSS</p>
               <a
                 href="https://github.com/andressouza25/jogoDaVelha"
                 target="_blank"
                 class="btn-project-small"
-                >Ver no GitHub</a
+                >
+                <strong data-i18n="button-github">Ver no GitHub</strong> 
+                </a
               >
             </div>
           </div>
           <div class="project-item">
             <img src="./images/relogio.png" alt="Relogio" />
             <div class="project-text-small">
-              <h3>Relógio</h3>
+              <h3 data-i18n="project-clock">Relógio</h3>
               <p>JavaScript | CSS</p>
               <a
                 href="https://github.com/andressouza25/clock"
                 target="_blank"
                 class="btn-project-small"
-                >Ver no GitHub</a
+                >
+                <strong data-i18n="button-github">Ver no GitHub</strong> 
+                </a
               >
             </div>
           </div>
           <div class="project-item">
             <img src="./images/formulario.png" alt="Formulario" />
             <div class="project-text-small">
-              <h3>Formulário</h3>
+              <h3 data-i18n="project-form">Formulário</h3>
               <p>JavaScript | CSS</p>
               <a
                 href="https://github.com/andressouza25/formulario"
                 target="_blank"
                 class="btn-project-small"
-                >Ver no GitHub</a
+                >
+                <strong data-i18n="button-github">Ver no GitHub</strong> 
+                </a
               >
             </div>
           </div>
@@ -343,7 +357,7 @@
     <!-- Contato -->
     <div class="section-container" id="contact">
       <div class="section-content">
-        <h2 class="section-title">Entre em contato</h2>
+        <h2 class="section-title" data-i18n="contact-title">Entre em contato</h2>
         <form
           class="contact-form"
           action="https://formsubmit.co/df6ae0860a229c6b6ee110af14b33ab2"
@@ -353,7 +367,7 @@
             type="text"
             name="fullName"
             id="fullName"
-            placeholder="Seu nome"
+            data-i18n-placeholder="placeholder-name"
             class="form-input"
             required
           />
@@ -361,7 +375,7 @@
             type="email"
             name="email"
             id="email"
-            placeholder="Seu E-mail"
+            data-i18n-placeholder="placeholder-email"
             class="form-input"
             required
           />
@@ -369,7 +383,7 @@
             name="message"
             id="message"
             rows="5"
-            placeholder="Sua mensagem"
+            data-i18n-placeholder="placeholder-message"
             class="form-input"
             required
           ></textarea>
@@ -378,7 +392,7 @@
             name="_next"
             value="https://andressouza25.github.io/portfolio/thanks.html"
           />
-          <input type="submit" value="Enviar" class="form-button" />
+          <input type="submit" value="Enviar" class="form-button" data-i18n="send-button"/>
         </form>
       </div>
     </div>
@@ -400,5 +414,12 @@
       </div>
       <p>© Copyright 2025</p>
     </div>
+    <script
+    src="https://kit.fontawesome.com/7ffaac3e08.js"
+    crossorigin="anonymous"
+  ></script>
+</head>
+<script src="script.js"></script>
+<script src="translations.js"></script>
   </body>
 </html>

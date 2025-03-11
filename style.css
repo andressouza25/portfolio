@@ -19,7 +19,8 @@ html {
 .navbar-container {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  align-items: center; /* Alinha os itens verticalmente */
+  justify-content: flex-end; /* Alinha os itens à direita */
   background: rgba(0, 0, 0, 0.8);
   padding: 20px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
@@ -30,21 +31,71 @@ html {
 
 .navbar-container > ul {
   display: flex;
+  align-items: center; /* Alinha os itens dentro da lista */
+  gap: 30px; /* Espaçamento entre os itens */
+  list-style: none;
+  margin-right: 20px; /* Ajuste para não encostar no canto direito */
+}
+
+.navbar-container > ul > li {
   list-style: none;
 }
 
-.navbar-container > ul > a > li {
+.navbar-container > ul > li a {
   text-transform: uppercase;
-  padding-right: 40px;
   color: #fff;
   letter-spacing: 0.1rem;
   opacity: 50%;
   transition: opacity 0.5s;
+  text-decoration: none;
 }
-.navbar-container > ul > li:hover {
+
+.navbar-container > ul > li a:hover {
   opacity: 100%;
   cursor: pointer;
 }
+
+/* Ajustando o botão de troca de idioma */
+#language-toggle {
+  position: absolute;
+  top: 50%; /* Centraliza verticalmente */
+  left: 20px; /* Mantém no canto esquerdo */
+  transform: translateY(-50%); /* Ajuste fino para centralização */
+  background: none;
+  border: 1px solid white; /* Borda fina e branca */
+  color: white; /* Cor do texto igual aos itens da navbar */
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 8px 16px; /* Ajuste fino no espaçamento interno */
+  text-transform: uppercase; /* Deixa o texto igual aos itens da navbar */
+  letter-spacing: 0.1rem; /* Espaçamento entre letras */
+  border-radius: 5px; /* Arredonda levemente a borda */
+  opacity: 0.5; /* Mesma opacidade inicial dos itens */
+  transition: opacity 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+#language-toggle:hover {
+  opacity: 1; /* Aumenta a opacidade no hover, igual aos itens da navbar */
+  border-color: #ddd; /* Bordas mais destacadas no hover */
+  cursor: pointer;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 20px;
+  padding: 10px 15px;
+  transition: background 0.3s ease-in-out;
+}
+
+.lang-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
 /* SHOWCASE */
 .showcase-container {
   height: 100vh;
@@ -66,12 +117,13 @@ html {
   background-blend-mode: color;
 }
 
+.showcase-text {
+  max-width: 80%;
+  text-align: center;
+}
+
 /* Sobre mim */
 
-.showcase-container > .showcase-text {
-  /* margin-bottom: 160px;
-  margin-left: 100px; */
-}
 .showcase-container > .showcase-text > h1 {
   font-weight: 600;
   font-size: 4rem;
