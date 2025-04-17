@@ -1,3 +1,4 @@
+// Toggle Menu Functionality (sem alterações)
 function toggleMenu() {
   const menu = document.getElementById("menu");
   const navbar = document.querySelector(".navbar-container");
@@ -5,6 +6,7 @@ function toggleMenu() {
   navbar.classList.toggle("active"); // Adiciona ou remove o fundo preto
 }
 
+// Linguagem
 document.addEventListener("DOMContentLoaded", function () {
   const langBtn = document.getElementById("language-toggle");
   let currentLang = localStorage.getItem("language") || "pt";
@@ -47,3 +49,49 @@ document.addEventListener("DOMContentLoaded", function () {
     setLanguage(currentLang);
   });
 });
+
+// Observador para Projetos
+const projectItems = document.querySelectorAll(".project-item");
+const observerProjects = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible"); // Adiciona a classe 'visible' quando o projeto entra na área visível
+
+        // Reinicia a animação removendo e adicionando novamente a classe 'slit-in-horizontal'
+        entry.target.classList.remove("slit-in-horizontal");
+        void entry.target.offsetWidth; // Força uma reflow para reiniciar a animação
+        entry.target.classList.add("slit-in-horizontal");
+      } else {
+        entry.target.classList.remove("visible"); // Remove a classe 'visible' quando o projeto sai da área visível
+      }
+    });
+  },
+  { threshold: 0.2 }
+); // Define o limiar de visibilidade (20% do item visível)
+
+projectItems.forEach((item) => {
+  observerProjects.observe(item); // Inicia a observação dos itens
+});
+
+// Seleciona a imagem da seção "Sobre Mim"
+const aboutImage = document.querySelector(".about-me-content img");
+
+// Configuração do Intersection Observer para a imagem
+const observerImage = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Quando a imagem entra na tela, adiciona a classe 'visible' para torná-la visível
+        entry.target.classList.add("visible");
+      } else {
+        // Quando a imagem sai da tela, remove a classe 'visible' para fazê-la desaparecer
+        entry.target.classList.remove("visible");
+      }
+    });
+  },
+  { threshold: 0.2 } // Quando 20% da imagem estiver visível
+);
+
+// Inicia a observação da imagem
+observerImage.observe(aboutImage);
