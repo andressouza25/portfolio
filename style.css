@@ -292,6 +292,11 @@ html {
   overflow: hidden;
   text-overflow: ellipsis; /* Adiciona "..." se o texto for muito grande */
   font-size: 0.9rem;
+  display: inline-block;
+}
+
+.project-buttons .btn-project {
+  margin-right: 15px; /* Ajuste no espaçamento entre os botões */
 }
 
 .btn-project:hover,
