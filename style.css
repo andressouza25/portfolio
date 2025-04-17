@@ -209,12 +209,18 @@ html {
 
 .projects-content {
   margin-top: 118px;
+  display: grid; /* Ativa o grid */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(600px, 1fr)
+  ); /* Cria uma grid dinâmica */
+  gap: 20px; /* Espaçamento entre os projetos */
 }
 
 .project-item {
   display: flex;
   align-items: center;
-  margin-bottom: 50px;
+  justify-content: space-between; /* Garante que os itens não fiquem espremidos */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -254,7 +260,7 @@ html {
 }
 
 .project-text {
-  margin-left: 50px;
+  /* margin-left: 50px; */
   max-width: 600px;
 }
 
@@ -267,6 +273,10 @@ html {
   margin-bottom: 15px; /* Para os projetos menores também */
 }
 
+.btn-project {
+  gap: 10px;
+}
+
 .btn-project,
 .btn-project-small {
   background: #202020; /* Preto/Cinza escuro */
@@ -274,6 +284,7 @@ html {
   border: 1px solid white; /* Adiciona um contorno para destaque */
   font-weight: 500;
   margin-top: 15px;
+  gap: 10px;
   padding: 10px 15px; /* Reduz o padding para acomodar textos longos */
   max-width: 90%; /* Garante que o botão não ultrapasse a área disponível */
   white-space: nowrap; /* Impede que o texto quebre em várias linhas */
@@ -291,7 +302,6 @@ html {
 
 .project-buttons {
   display: flex;
-  gap: 10px; /* Espaço entre os botões */
   flex-wrap: wrap; /* Permite quebrar para linha de baixo caso necessário */
   justify-content: center; /* Alinha ao centro */
   margin-top: 10px; /* Espaço entre o texto acima e os botões */
