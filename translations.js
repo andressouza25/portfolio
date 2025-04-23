@@ -33,6 +33,9 @@ const translations = {
     "project-weather": "Previsão de Tempo",
     "project-weather-desc":
       "Este projeto marca o início da minha jornada com desenvolvimento web, combinando HTML, CSS e JavaScript para criar uma aplicação dinâmica de previsão do tempo. O objetivo foi integrar conceitos fundamentais de estruturação, estilização e interatividade, proporcionando uma experiência intuitiva para o usuário ao consultar condições climáticas.",
+    "project-kairos": "Imobiliária Kairos",
+    "project-kairos-desc":
+      "Plataforma de imobiliária desenvolvida com React no front-end e MongoDB no back-end. O projeto envolve funcionalidades de cadastro, edição, exibição e filtragem de imóveis. O objetivo é criar uma interface limpa e intuitiva para o usuário, enquanto o back-end é responsável pelo gerenciamento de dados e autenticação.",
     "project-barber": "Agendamento de Barbearia",
     "project-barber-desc":
       "Aplicação desenvolvida para otimizar o processo de agendamento de serviços em barbearias. Com uma interface responsiva, permite que os usuários escolham a barbearia, selecionem o serviço desejado e agendem um horário de forma prática e eficiente. Embora seja um projeto focado em dispositivos móveis, sua implementação web garante acessibilidade multiplataforma.",
@@ -97,6 +100,9 @@ const translations = {
     "project-weather": "Weather Forecast",
     "project-weather-desc":
       "This project marks the beginning of my journey with web development, combining HTML, CSS, and JavaScript to create a dynamic weather forecast application. The goal was to integrate fundamental concepts of structure, styling, and interactivity, providing an intuitive experience for users when querying weather conditions.",
+    "project-kairos": "Kairos Real Estate",
+    "project-kairos-desc":
+      "Real estate platform developed with React on the front-end and MongoDB on the back-end. The project includes features for property registration, editing, display, and filtering. The goal is to create a clean and intuitive interface for the user, while the back-end is responsible for data management and authentication.",
     "project-barber": "Book a Barbershop Appointment",
     "project-barber-desc":
       "Application developed to optimize the scheduling process of services in barbershops. With a responsive interface, it allows users to choose the barbershop, select the desired service, and schedule an appointment in a practical and efficient way. Although it is a project focused on mobile devices, its web implementation ensures multiplatform accessibility.",
