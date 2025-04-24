@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Atualiza o botão de troca de idioma
-    langBtn.innerHTML = lang === "pt" ? "🇺🇸 EN" : "🇧🇷 PT";
+    langBtn.innerHTML = lang === "pt" ? "🇧🇷 PT" : "🇺🇸 EN";
 
     // Salva a escolha no localStorage
     localStorage.setItem("language", lang);
